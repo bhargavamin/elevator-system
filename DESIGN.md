@@ -1,18 +1,18 @@
 ## Elevator System Design.
 
 
-###Usecase Diagram for Elevator System
+### Usecase Diagram for Elevator System
 
 ![](images/usecase_diagram_ecs.png)
 
 The above mentioned diagram depicts following usecases for a Elevator System.
 
-Actors:
+**Actors:**
 
 - Elevator system would consist of two actors passenger and maintainer 
 - Maintainer does same tasks as user but additionally performs maintainence
 
-Usecases:
+**Usecases:**
 
 - PressFloorButton: The passenger in this usecase presses the floor button requesting an elevator
 - PressElevatorButton: The passenger here uses buttons inside elevator to select the floor they would like to go on
@@ -23,7 +23,7 @@ Usecases:
 Therefore, the usecase diagrams states that the passenger/maintainer is interacting with Elevator system by making elevator class and decide get on/off depending on indications from the system.
 
 
-###Class Diagram for Elevator System (Software Architecture View)
+### Class Diagram for Elevator System (Software Architecture View)
 
 ![](images/class_diagram_ecs.png)
 
