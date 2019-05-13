@@ -1,0 +1,19 @@
+elevators:
+- name: ElevatorA
+  id: 1
+- name: ElevatorB
+  id: 2
+
+floors: 8
+
+status:
+- id: 1
+  state: transit
+  starttime: 2019-05-13 05:05:51.531538
+  endtime: 2019-05-13 05:07:06.531538
+  floor: 7
+- id: 2
+  state: transit
+  starttime: 2019-05-13 04:55:57.116783
+  endtime: 2019-05-13 04:56:27.116783
+  floor: 5
