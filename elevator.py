@@ -117,13 +117,22 @@ class ElevatorControlSystem():
 		# algo to pick the most efficient elevator
 
 		elevator_score = []
+		elevator_transit = []
 		for elevator in selected_elevator:
-			distance = abs(int(elevator['floor']) - int(requested_floor))
-			elevator_score.append({'id':elevator['id'], 'score':distance})
-		best_elevator = min(elevator_score, key = lambda x : x['score'])['id']
-		print("Found the best and fastest elevator: ", best_elevator)
-		self.determinDirection(best_elevator, requested_floor)
-		return(best_elevator)
+			if elevator['state']:
+				distance = abs(int(elevator['floor']) - int(requested_floor))
+				elevator_score.append({'id':elevator['id'], 'score':distance})
+			else:
+				print(
+					"Please wait Elevator {} is in transit state to floor {}"
+					.format(elevator['id'],elevator['floor']))
+
+		if elevator_score:
+			best_elevator = min(elevator_score, key = lambda x : x['score'])['id']
+			print("Found the best and fastest elevator: ", best_elevator)
+			self.determinDirection(best_elevator, requested_floor)
+			return(best_elevator)
+
 
 	def checkEta(self, id, desired_floor, requested_floor):
 		# print the ETA
@@ -282,7 +291,7 @@ if __name__ == '__main__':
 						ecs.updateTime(best_elevator, requested_floor, desired_floor)
 				else:
 					print(
-						"Input are out of range: min 1 and max {} allowed"
+						"Input is out of range: min 1 and max {} allowed"
 						.format(no_of_floors))
 			else:
 				print("You're on same floor as your request.")
