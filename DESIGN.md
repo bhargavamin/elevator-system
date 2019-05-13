@@ -19,7 +19,7 @@ The diagram mentioned above depicts the following use cases for an Elevator Syst
 - CheckIndicator: The passenger checks indicator to see if the intended floor has arrived or not
 - CheckDirection: The passenger checks the direction of lift from lobby, floors and from inside of the elevator
 
-Environment controlled:
+**Environment controlled:**
 - EmergencyBrakes: The passenger can apply for emergency stop
 - PerformMaintainence: The maintainer performs maintenance tests on the elevator
 
