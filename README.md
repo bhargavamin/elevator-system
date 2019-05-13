@@ -1,6 +1,6 @@
 # elevator+system
 
-## Pre-requesite
+## Pre-requisite
 - python 3.7
 - ruamel.yaml (`pip install ruamel.yaml`)
 - `configs.yaml` file
