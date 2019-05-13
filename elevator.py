@@ -117,7 +117,6 @@ class ElevatorControlSystem():
 		# algo to pick the most efficient elevator
 
 		elevator_score = []
-		elevator_transit = []
 		for elevator in selected_elevator:
 			if elevator['state']:
 				distance = abs(int(elevator['floor']) - int(requested_floor))
